@@ -1,0 +1,39 @@
+/* เพิ่มสไตล์สำหรับ card-preview */
+.card-preview {
+    border: 2px solid #e0e0e0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* สำหรับธีม "Heart" */
+  .card-preview.heart {
+    background-color: #f8d7da;
+    color: #d91d2a;
+    border-color: #f5c6cb;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* สำหรับธีม "Flower" */
+  .card-preview.flower {
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffeeba;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* เพิ่มสไตล์ที่ใช้งานได้ทั่วไป */
+  input, select {
+    font-family: inherit;
+    border: 1px solid #ccc;
+  }
+  
+  input:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  

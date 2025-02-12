@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src", 
+    "paths": {
+      "@blocks/*": ["./src/blocks/*"]
+    },
+    "moduleResolution": "node"
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
