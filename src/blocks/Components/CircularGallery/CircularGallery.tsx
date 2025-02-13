@@ -1,5 +1,5 @@
 /*
-	jsrepo 1.32.1
+	jsrepo 1.35.1
 	Installed from https://reactbits.dev/ts/tailwind/
 	2-13-2025
 */
@@ -716,7 +716,6 @@ export default function CircularGallery({
       app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font]);
-
   return (
     <div
       className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing"

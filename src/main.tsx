@@ -5,13 +5,21 @@ import App from './App.tsx'
 import LoveMessage from './msg.tsx'
 import Card from './card.tsx'
 import Bby from './bby';  // Importing bby.tsx as the main component
+import LoveQuiz from './quiz.tsx'
+import LovePlaylist from './random.tsx'
+import LoveMap from './map.tsx'
+import Bbys from './Bbys.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
     <Bby />
+    <Bbys />
     <LoveMessage />
     <Card />
+    <LoveQuiz />
+    <LovePlaylist />
+    <LoveMap />
   </StrictMode>,
 )
