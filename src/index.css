@@ -1,5 +1,6 @@
-@import "tailwindcss";
+@import "tailwindcss"; /* เอา tailwind มาใช้ */
 
+/* กำหนด root ให้ใช้งาน font ที่เหมาะสม */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,6 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* สำหรับลิงค์ */
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,19 +26,23 @@ a:hover {
   color: #535bf2;
 }
 
+/* ปรับแต่ง body ให้เต็มหน้าจอ และใช้ flex */
 body {
-  margin: 0;
+  margin: 0;  /* ลบ margin */
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  place-items: center;  /* จัดตำแหน่งให้อยู่กลาง */
+  width: 100%;  /* ใช้ความกว้างเต็ม */
+  height: 100vh; /* ใช้ความสูงเต็มหน้าจอ */
+  background-color: #242424; /* เพิ่มสีพื้นหลัง */
 }
 
+/* สำหรับ header h1 */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* ปรับปุ่ม */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -48,22 +54,27 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* สำหรับโหมดสีอ่อน */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

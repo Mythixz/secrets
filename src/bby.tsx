@@ -1,34 +1,45 @@
-import GridMotion from './blocks/GridMotion.tsx';
+import GridMotion from './blocks/Backgrounds/GridMotion/GridMotion';
+import './App.css'; // แน่ใจว่าได้ import ไฟล์ CSS
+import bbyImage from './assets/bby.jpg';  // นำเข้าไฟล์ภาพจากโฟลเดอร์ src/assets
 
-// ต่อจากนี้สามารถใช้ GridMotion ได้
-  
-// note: you'll need to make sure the parent container of this component is sized properly
-const items = [
-  'Item 1',
-  <div key='jsx-item-1'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 2',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 4',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 5',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 7',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 8',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 10',
-  <div key='jsx-item-3'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 11',
-  <div key='jsx-item-2'>Custom JSX Content</div>,
-  'Item 13',
-  <div key='jsx-item-4'>Custom JSX Content</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'Item 14',
-  // Add more items as needed
-];
+function App() {
+  const items = [
+    <img src={bbyImage} alt="Item 1" />, 
+    <img src={bbyImage} alt="Item 2" />, 
+    <img src={bbyImage} alt="Item 3" />, 
+    <img src={bbyImage} alt="Item 4" />, 
+    <img src={bbyImage} alt="Item 5" />, 
+    <img src={bbyImage} alt="Item 6" />, 
+    <img src={bbyImage} alt="Item 7" />, 
+    <img src={bbyImage} alt="Item 8" />, 
+    <img src={bbyImage} alt="Item 9" />, 
+    <img src={bbyImage} alt="Item 10" />, 
+    <img src={bbyImage} alt="Item 11" />, 
+    <img src={bbyImage} alt="Item 12" />, 
+    <img src={bbyImage} alt="Item 13" />,
+    <img src={bbyImage} alt="Item 14" />, 
+    <img src={bbyImage} alt="Item 15" />, 
+    <img src={bbyImage} alt="Item 16" />, 
+    <img src={bbyImage} alt="Item 17" />, 
+    <img src={bbyImage} alt="Item 18" />, 
+    <img src={bbyImage} alt="Item 19" />, 
+    <img src={bbyImage} alt="Item 20" />, 
+    <img src={bbyImage} alt="Item 21" />, 
+    <img src={bbyImage} alt="Item 22" />, 
+    <img src={bbyImage} alt="Item 23" />, 
+    <img src={bbyImage} alt="Item 24" />, 
+    <img src={bbyImage} alt="Item 25" />, 
+    <img src={bbyImage} alt="Item 26" />, 
+    <img src={bbyImage} alt="Item 27" />, 
+    // เพิ่มรายการอื่น ๆ ตามต้องการ
+  ];
 
-<GridMotion items={items} />
+  return (
+    <div className="App">
+      <h1 className="text-center text-3xl font-bold py-6">Items Grid</h1>
+      <GridMotion items={items} />
+    </div>
+  );
+}
+
+export default App;

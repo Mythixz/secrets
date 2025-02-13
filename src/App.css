@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 #root {
-  max-width: 1280px;
+  width: 100%;  /* ทำให้รากของเว็บไซต์ใช้ความกว้างเต็ม */
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+body {
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; /* ทำให้ body ครอบคลุมทั้งหน้าจอ */
 }
 
 .logo {
@@ -39,4 +48,18 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.time-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4c4c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-class {
+  font-size: 4rem; /* ปรับขนาดฟอนต์ */
 }

@@ -4,11 +4,12 @@
 	2-12-2025
 */
 
-import { useEffect, useRef, FC } from "react";
+import { useEffect, useRef, FC, JSX } from "react";
 import { gsap } from "gsap";
 
+
 interface GridMotionProps {
-  items?: string[];
+  items: (string | JSX.Element)[];
   gradientColor?: string;
 }
 
@@ -85,7 +86,9 @@ const GridMotion: FC<GridMotionProps> = ({
               key={rowIndex}
               className="grid gap-4 grid-cols-7"
               style={{ willChange: "transform, filter" }}
-              ref={(el) => (rowRefs.current[rowIndex] = el)}
+              ref={(el) => {
+                rowRefs.current[rowIndex] = el;
+              }}
             >
               {Array.from({ length: 7 }, (_, itemIndex) => {
                 const content = combinedItems[rowIndex * 7 + itemIndex];

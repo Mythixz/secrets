@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import './card.css'; // แน่ใจว่าได้ import ไฟล์ CSS
-import GridMotion from '@blocks/GridMotion';
-
 
 
 function Card() {
