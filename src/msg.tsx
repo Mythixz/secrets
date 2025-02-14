@@ -13,7 +13,7 @@ function LoveLetter() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Write Your Love Letter 💌
+        เขียนจดหมายให้ตัวเอง 💌
       </motion.h2>
 
       {!isOpened ? (

@@ -6,26 +6,38 @@ function Card() {
   const [cardTheme, setCardTheme] = useState("heart");
   const [isOpened, setIsOpened] = useState(false);
 
+  // กำหนดธีมการ์ด
+  const themes = {
+    heart: "bg-gradient-to-r from-red-500 to-pink-500 text-white",
+    flower: "bg-gradient-to-r from-pink-200 to-rose-300 text-pink-700",
+    night: "bg-gradient-to-r from-blue-900 to-indigo-500 text-white",
+    chocolate: "bg-gradient-to-r from-yellow-700 to-brown-500 text-white",
+    fireworks: "bg-gradient-to-r from-purple-500 to-indigo-600 text-white",
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-rose-400 via-pink-500 to-red-500 p-6">
       <motion.h2 
-        className="text-3xl font-semibold text-white mb-6"
+        className="text-4xl font-bold text-white mb-6"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Create Your Love Card 💌
+        🌟 สร้างการ์ดสุดพิเศษ 💌
       </motion.h2>
 
       {/* Dropdown เลือกธีมการ์ด */}
       <div className="mb-4">
-        <label className="text-white font-semibold mr-2">Choose Theme:</label>
+        <label className="text-white font-semibold mr-2">เลือกธีมการ์ด:</label>
         <select
           onChange={(e) => setCardTheme(e.target.value)}
-          className="p-2 rounded-lg bg-white text-black border-2 border-pink-400 shadow-md"
+          className="p-3 rounded-lg bg-white text-black border-2 border-pink-400 shadow-md"
         >
           <option value="heart">❤️ Heart Theme</option>
           <option value="flower">🌸 Flower Theme</option>
+          <option value="night">🌙 Night Sky Theme</option>
+          <option value="chocolate">🍫 Chocolate Theme</option>
+          <option value="fireworks">🎆 Fireworks Theme</option>
         </select>
       </div>
 
@@ -35,13 +47,13 @@ function Card() {
         value={cardMessage}
         onChange={(e) => setCardMessage(e.target.value)}
         placeholder="Write your message..."
-        className="p-3 mt-2 rounded-lg border-2 border-pink-400 shadow-md w-80 text-black focus:ring-2 focus:ring-pink-500"
+        className="p-4 mt-2 rounded-lg border-2 border-pink-400 shadow-md w-96 text-black focus:ring-2 focus:ring-pink-500"
       />
 
       {/* แสดงรูปการ์ด */}
       {!isOpened ? (
         <motion.div
-          className="cursor-pointer mt-6"
+          className="cursor-pointer mt-8"
           onClick={() => setIsOpened(true)}
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -51,20 +63,16 @@ function Card() {
           <img
             src="https://cdn-icons-png.flaticon.com/512/1521/1521649.png"
             alt="Closed Card"
-            className="w-32 h-32 drop-shadow-lg"
+            className="w-40 h-40 drop-shadow-lg"
           />
           <p className="text-white mt-2 italic animate-pulse">
-            Click to open the card
+            📩 Click to open the card
           </p>
         </motion.div>
       ) : (
         <motion.div
-          className={`p-6 mt-6 rounded-lg shadow-xl text-center w-80 relative ${
-            cardTheme === "heart"
-              ? "bg-gradient-to-r from-red-500 to-pink-500 text-white"
-              : "bg-gradient-to-r from-pink-200 to-rose-300 text-pink-700"
-          }`}
-          initial={{ opacity: 0, y: -30, scale: 0.8 }}
+          className={`p-8 mt-8 rounded-xl shadow-2xl text-center w-96 relative ${themes[cardTheme]}`}
+          initial={{ opacity: 0, y: -50, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
@@ -76,8 +84,12 @@ function Card() {
             ❌
           </button>
 
-          <h3 className="text-xl font-semibold">
-            {cardTheme === "heart" ? "❤️ Love Card ❤️" : "🌸 Flower Card 🌸"}
+          <h3 className="text-2xl font-bold">
+            {cardTheme === "heart" ? "❤️ Love Card ❤️" : ""}
+            {cardTheme === "flower" ? "🌸 Flower Card 🌸" : ""}
+            {cardTheme === "night" ? "🌙 Night Sky Card 🌙" : ""}
+            {cardTheme === "chocolate" ? "🍫 Chocolate Card 🍫" : ""}
+            {cardTheme === "fireworks" ? "🎆 Fireworks Card 🎆" : ""}
           </h3>
           <p className="mt-4 text-lg font-bold italic">{cardMessage}</p>
         </motion.div>

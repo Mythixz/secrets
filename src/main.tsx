@@ -19,7 +19,6 @@ createRoot(document.getElementById('root')!).render(
     <LoveMessage />
     <Card />
     <LoveQuiz />
-    <LovePlaylist />
     <LoveMap />
   </StrictMode>,
 )

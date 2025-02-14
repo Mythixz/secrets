@@ -4,26 +4,46 @@ import { motion } from "framer-motion";
 
 // 📍 กำหนดไอคอน Marker เอง
 const customIcon = new L.Icon({
-  iconUrl: "https://cdn-icons-png.flaticon.com/512/535/535188.png",
+  iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png",
   iconSize: [32, 32],
 });
 
 // 📌 สถานที่พิเศษของเรา
 const loveLocations = [
   {
-    name: "💖 จุดเริ่มต้นของเรา",
-    position: [13.7563, 100.5018] as [number, number],
-    description: "ที่ที่เราพบกันครั้งแรก 💕",
+    name: "🌳 สวนร้อยปีจุฬา",
+    position: [13.7347, 100.5295] as [number, number],
+    description: "สถานที่พักผ่อนสุดชิล 🌿",
   },
   {
-    name: "🍰 คาเฟ่สุดน่ารัก",
-    position: [13.7401, 100.5231] as [number, number],
-    description: "ที่ที่เรานั่งคุยกันเป็นชั่วโมง ☕",
+    name: "🏢 เซ็นทรัลพระราม 9",
+    position: [13.7563, 100.5669] as [number, number],
+    description: "ห้างสรรพสินค้าที่เราชอบไปด้วยกัน 🛍️",
   },
   {
-    name: "🌅 จุดชมวิวที่ไปด้วยกัน",
-    position: [13.7281, 100.5432] as [number, number],
-    description: "วันที่เราไปดูพระอาทิตย์ตกด้วยกัน 🌇",
+    name: "🛍️ เซ็นทรัลลาดพร้าว",
+    position: [13.8161, 100.5612] as [number, number],
+    description: "แหล่งช้อปปิ้งที่มีทุกอย่าง! 🎉",
+  },
+  {
+    name: "🎭 เอสพานาด",
+    position: [13.7695, 100.5719] as [number, number],
+    description: "โรงหนังและที่เที่ยวสุดสนุก 🍿🎮",
+  },
+  {
+    name: "🛒 ยูเนี่ยนมอลล์",
+    position: [13.8121, 100.5618] as [number, number],
+    description: "ตลาดเสื้อผ้าสุดแนว ราคาดี! 👕",
+  },
+  {
+    name: "🏙️ ตึกจีทาวเวอร์",
+    position: [13.7569, 100.5651] as [number, number],
+    description: "ออฟฟิศสุดหรู พร้อมวิวเมือง 🏢",
+  },
+  {
+    name: "🛍️ ตลาดจ๊อดแฟร์",
+    position: [13.7488, 100.5683] as [number, number],
+    description: "ตลาดนัดกลางคืนที่คึกคัก 🌙✨",
   },
 ];
 
