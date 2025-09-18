@@ -71,7 +71,7 @@ function Card() {
         </motion.div>
       ) : (
         <motion.div
-          className={`p-8 mt-8 rounded-xl shadow-2xl text-center w-96 relative ${themes[cardTheme]}`}
+          className={`p-8 mt-8 rounded-xl shadow-2xl text-center w-96 relative ${themes[cardTheme as keyof typeof themes]}`}
           initial={{ opacity: 0, y: -50, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}

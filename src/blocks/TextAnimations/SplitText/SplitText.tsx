@@ -94,9 +94,8 @@ const SplitText: React.FC<SplitTextProps> = ({
                                 key={index}
                                 style={springs[index] as unknown as React.CSSProperties}
                                 className="inline-block transform transition-opacity will-change-transform"
-                            >
-                                {letter}
-                            </animated.span>
+                                {...({ children: letter } as any)}
+                            />
                         );
                     })}
                     <span style={{ display: 'inline-block', width: '0.3em' }}>&nbsp;</span>

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react"; // Not used
 import CircularGallery from "./blocks/Components/CircularGallery/CircularGallery";
 import BlurText from "./blocks/TextAnimations/BlurText/BlurText";
 import bbyImage from "./assets/bby.jpg"; // นำเข้าไฟล์ภาพจาก src/assets

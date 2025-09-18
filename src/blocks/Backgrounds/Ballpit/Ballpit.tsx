@@ -476,8 +476,8 @@ class Y extends MeshPhysicalMaterial {
 
   constructor(params: any) {
     super(params);
-    this.defines = { USE_UV: "" };
-    this.onBeforeCompile = (shader) => {
+    (this as any).defines = { USE_UV: "" };
+    (this as any).onBeforeCompile = (shader: any) => {
       Object.assign(shader.uniforms, this.uniforms);
       shader.fragmentShader =
         `
@@ -674,16 +674,17 @@ function isInside(rect: DOMRect) {
 }
 
 const { randFloat, randFloatSpread } = MathUtils;
-const F = new Vector3();
-const I = new Vector3();
-const O = new Vector3();
-const V = new Vector3();
-const B = new Vector3();
-const N = new Vector3();
-const _ = new Vector3();
-const j = new Vector3();
-const H = new Vector3();
-const T = new Vector3();
+// Unused variables commented out for build
+// const F = new Vector3();
+// const I = new Vector3();
+// const O = new Vector3();
+// const V = new Vector3();
+// const B = new Vector3();
+// const N = new Vector3();
+// const _ = new Vector3();
+// const j = new Vector3();
+// const H = new Vector3();
+// const T = new Vector3();
 
 /* =========================================================
    Class Z – Instanced Mesh for Spheres
@@ -696,9 +697,9 @@ class Z extends InstancedMesh {
 
   constructor(renderer: WebGLRenderer, params: Partial<typeof XConfig> = {}) {
     const config = { ...XConfig, ...params };
-    const roomEnv = new RoomEnvironment();
+    const roomEnv = new RoomEnvironment(renderer);
     const pmrem = new PMREMGenerator(renderer);
-    const envTexture = pmrem.fromScene(roomEnv).texture;
+    const envTexture = pmrem.fromScene(roomEnv as any).texture;
     const geometry = new SphereGeometry();
     const material = new Y({ envMap: envTexture, ...config.materialParams });
     material.envMapRotation.x = -Math.PI / 2;

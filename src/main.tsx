@@ -6,8 +6,8 @@ import LoveMessage from './msg.tsx'
 import Card from './card.tsx'
 import Bby from './bby';  // Importing bby.tsx as the main component
 import LoveQuiz from './quiz.tsx'
-import LovePlaylist from './random.tsx'
-import LoveMap from './map.tsx'
+// import LovePlaylist from './random.tsx' // File not found
+// import LoveMap from './map.tsx' // Not used
 import Bbys from './Bbys.tsx'
 
 
@@ -19,6 +19,6 @@ createRoot(document.getElementById('root')!).render(
     <LoveMessage />
     <Card />
     <LoveQuiz />
-    <LoveMap />
+    {/* <LoveMap /> */}
   </StrictMode>,
 )
